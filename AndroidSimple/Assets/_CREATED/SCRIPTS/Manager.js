@@ -25,7 +25,8 @@ function Update () {
 
 function AddPoint ()
 {
-    points++;
+    points += 1;
+    return;
 }
 
 function ShowPoints()
@@ -39,9 +40,8 @@ function SpawnItem()
     if(currentCount >= spawnRate)
     {
         var newItem : GameObject = Instantiate(item, spawn.transform.position, spawn.transform.rotation);
-        newItem.AddComponent(Rigidbody);
-        newItem.GetComponent(Rigidbody).useGravity= true;
-        newItem.GetComponent(Rigidbody).AddForce(Vector3(Random.Range(-5,5), 0,0), ForceMode.Impulse);
+     
+       newItem.GetComponent(Rigidbody2D).AddForce(Vector2(Random.Range(-3,3),0), ForceMode2D.Impulse);
         currentCount = 0;
         spawnRate -= .001;
     }

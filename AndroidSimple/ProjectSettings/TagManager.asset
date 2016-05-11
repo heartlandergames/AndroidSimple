@@ -8,6 +8,8 @@ TagManager:
   - ITEM
   - OUTOFBOUNDS
   - QUITBUTTON
+  - BALL
+  - TESTBUTTON
   layers:
   - Default
   - TransparentFX
